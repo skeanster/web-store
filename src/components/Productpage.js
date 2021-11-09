@@ -1,22 +1,32 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import cartChange from '../state/Cartstate';
+import { cartAdd } from '../state/Cartstate';
+import Products from '../state/Productsstate';
 
 const Productpage = () => {
   const addToCart = (e) => {
-    cartChange(e.target.id, 'addToCart');
+    cartAdd(e.target.id);
   };
 
   return (
     <div>
       <Navbar />
-      <div className="productPage">Product page</div>
-      <button onClick={addToCart} id="lime">
-        Add lime
-      </button>
-      <button onClick={addToCart} id="lemon">
-        Add lemon
-      </button>
+      <div className="productPage">
+        {Products.map((item) => {
+          return (
+            <div className="item" key={item.sku}>
+              <div className="itemPhoto">Photo</div>
+              <div className="itemText">
+                <div className="itemName">{item.name}</div>
+                <div className="itemPrice">${item.price}.00</div>
+                <button onClick={addToCart} id={item.name}>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
       <Footer />
     </div>
   );

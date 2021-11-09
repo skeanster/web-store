@@ -1,19 +1,18 @@
-let initState = [{ sku: 'lime', quantity: 1 }];
+let state = [];
+
 const isInCart = (product) => {
-  return initState.find(({ sku }) => sku === product);
+  return state.find(({ name }) => name === product);
 };
 
-const cartChange = (product, action) => {
-  if (action === 'addToCart') {
-    if (isInCart(product) === undefined) {
-      initState.push({ sku: product, quantity: 1 });
-      console.log(initState);
-    } else {
-      initState.find(({ sku }) => sku === product).quantity =
-        initState.find(({ sku }) => sku === product).quantity + 1;
-      console.log(initState);
-    }
+const cartAdd = (product) => {
+  if (isInCart(product) === undefined) {
+    state.push({ name: product, quantity: 1 });
+    console.log(state);
+  } else {
+    state.find(({ name }) => name === product).quantity =
+      state.find(({ name }) => name === product).quantity + 1;
+    console.log(state);
   }
 };
 
-export default cartChange;
+export { cartAdd, state };

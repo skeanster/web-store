@@ -20,9 +20,11 @@ const Navbar = () => {
             Contact
           </div>
         </Link>
-        <div className="navItems" id="cart">
-          Cart
-        </div>
+        <Link to="/CartPage">
+          <div className="navItems" id="cart">
+            Cart
+          </div>
+        </Link>
       </div>
     </div>
   );
