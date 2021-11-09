@@ -6,7 +6,9 @@ const Homepage = () => {
       <div className="homeTextContainer">
         <div className="subMainTitle">BEST ONLINE STORE OF THE YEAR</div>
         <div className="mainTitle">We don't do fashion, we are fashion</div>
-        <button className="mainShopButton">Shop Now</button>
+        <Link to="/Productpage">
+          <button className="mainShopButton">Shop Now</button>
+        </Link>
       </div>
     </div>
   );
