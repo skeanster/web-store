@@ -1,22 +1,35 @@
 a {
   color: white;
+  text-decoration: none;
 }
 
-.App {
-  text-align: center;
-  min-height: 100vh;
+.navbarContainer {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar {
-  background-color: #282c34;
+  background-color: black;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   font-size: calc(10px + 1vmin);
   color: white;
+  width: 80%;
+  max-width: 1075px;
+  font-weight: 300;
+  grid-gap: 10px;
+  gap: 10px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: calc(20px + 2vmin);
 }
 
 .navItemsContainer {
@@ -26,19 +39,90 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  font-size: calc(10px + 1.5vmin);
+}
+
+#cart {
+  display: flex;
+  gap: 10px;
+  border: 2px solid white;
+  padding: 8px;
+  border-radius: 15px;
 }
 
 .homepageContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 60vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./components/images/people.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-size: calc(10px + 1vmin);
 }
 
 .homeTextContainer {
+  position: absolute;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  padding-top: 15vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media only screen and (max-width: 400px) {
+  .homeTextContainer {
+    padding-top: 8vh;
+  }
+}
+
+.subMainTitle {
+  color: rgb(77 21 138);
+  background-color: white;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.mainShopButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 15rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50px;
+  background-color: rgb(77 21 138);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: 2px solid white;
+  margin-top: 20px;
+  font-size: calc(10px + 2vmin);
+}
+
+.mainShopButton:hover {
+  color: rgb(77 21 138);
+  background-color: white;
+  border: 2px solid rgb(77 21 138);
 }
 
 .footerContainer {
@@ -86,4 +170,5 @@ a {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  padding: 15px;
 }

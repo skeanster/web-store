@@ -1,10 +1,12 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Contactpage = () => {
+const Contactpage = (props) => {
+  const { cartTotal } = props;
+
   return (
     <div>
-      <Navbar />
+      <Navbar cartTotal={cartTotal} />
       <div>contact page</div>
       <Footer />
     </div>

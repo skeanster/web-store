@@ -1,12 +1,13 @@
-import { state } from '../state/Cartstate';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const CartPage = () => {
+const CartPage = (props) => {
+  const { cartTotal, productsList } = props;
+
   return (
     <div className="cartPage">
-      <Navbar />
-      {state.map((item) => {
+      <Navbar cartTotal={cartTotal} />
+      {productsList.map((item) => {
         return (
           <div key={item.name}>
             {item.name}, quantity: {item.quantity}

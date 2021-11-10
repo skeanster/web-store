@@ -1,16 +1,13 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { cartAdd } from '../state/Cartstate';
-import Products from '../state/Productsstate';
+import Products from '../data/ProductData';
 
-const Productpage = () => {
-  const addToCart = (e) => {
-    cartAdd(e.target.id);
-  };
+const Productpage = (props) => {
+  const { cartTotal, cartAdd } = props;
 
   return (
     <div>
-      <Navbar />
+      <Navbar cartTotal={cartTotal} />
       <div className="productPage">
         {Products.map((item) => {
           return (
@@ -19,7 +16,13 @@ const Productpage = () => {
               <div className="itemText">
                 <div className="itemName">{item.name}</div>
                 <div className="itemPrice">${item.price}.00</div>
-                <button onClick={addToCart} id={item.name}>
+                <button
+                  onClick={cartAdd}
+                  className="addItemButton"
+                  name={item.name}
+                  sku={item.sku}
+                  price={item.price}
+                >
                   Add to Cart
                 </button>
               </div>
