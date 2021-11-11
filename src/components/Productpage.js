@@ -15,7 +15,7 @@ const Productpage = (props) => {
               <div className="itemPhoto">Photo</div>
               <div className="itemText">
                 <div className="itemName">{item.name}</div>
-                <div className="itemPrice">${item.price}.00</div>
+                <div className="itemPrice">${item.price}</div>
                 <button
                   onClick={cartAdd}
                   className="addItemButton"

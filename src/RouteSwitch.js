@@ -27,7 +27,14 @@ const RouteSwitch = () => {
           }),
         },
         { totalItems: cartState[1].totalItems + 1 },
-        { totalCost: 0 },
+        {
+          totalCost:
+            cartState[2].totalCost +
+            Math.round(
+              (Number(item.target.dataset.price) + Number.EPSILON) * 100
+            ) /
+              100,
+        },
       ]);
     } else {
       let itemExist = cartState[0].products.find(
@@ -43,7 +50,14 @@ const RouteSwitch = () => {
           products: tempArray,
         },
         { totalItems: cartState[1].totalItems + 1 },
-        { totalCost: 0 },
+        {
+          totalCost:
+            cartState[2].totalCost +
+            Math.round(
+              (Number(item.target.dataset.price) + Number.EPSILON) * 100
+            ) /
+              100,
+        },
       ]);
     }
   };
@@ -75,6 +89,8 @@ const RouteSwitch = () => {
             <CartPage
               cartTotal={cartState[1].totalItems}
               productsList={cartState[0].products}
+              totalPrice={cartState[2].totalCost}
+              cartAdd={cartAdd}
             />
           }
         />
