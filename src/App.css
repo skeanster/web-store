@@ -236,3 +236,33 @@ a {
   bottom: 0;
   z-index: -10;
 }
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  grid-gap: 20px;
+  gap: 20px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.cartItemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.cartPhoto {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+}
+
+.itemChangeButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}

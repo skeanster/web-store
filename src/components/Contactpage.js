@@ -95,7 +95,7 @@ const Contactpage = (props) => {
           <div className="contactTextContainer">
             <div className="contactTextLogo">FakeStore</div>
             <div className="contactTextAddress">
-              420 Hacker Way, Menlo Park USA
+              2 Hacker Way, Menlo Park USA
             </div>
           </div>
         </div>

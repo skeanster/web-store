@@ -17,13 +17,13 @@ const RouteSwitch = () => {
   };
 
   const cartAdd = (item) => {
-    if (isInCart(item.target.name) === undefined) {
+    if (isInCart(item.target.dataset.name) === undefined) {
       setcartState([
         {
           products: cartState[0].products.concat({
-            name: item.target.name,
+            name: item.target.dataset.name,
             quantity: 1,
-            cost: item.target.price,
+            cost: item.target.dataset.price,
           }),
         },
         { totalItems: cartState[1].totalItems + 1 },
@@ -31,7 +31,7 @@ const RouteSwitch = () => {
       ]);
     } else {
       let itemExist = cartState[0].products.find(
-        ({ name }) => name === item.target.name
+        ({ name }) => name === item.target.dataset.name
       );
       let indexOfItem = cartState[0].products.indexOf(itemExist);
       let tempArray = [...cartState[0].products];

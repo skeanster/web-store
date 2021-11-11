@@ -19,9 +19,8 @@ const Productpage = (props) => {
                 <button
                   onClick={cartAdd}
                   className="addItemButton"
-                  name={item.name}
-                  sku={item.sku}
-                  price={item.price}
+                  data-name={item.name}
+                  data-price={item.price}
                 >
                   Add to Cart
                 </button>
