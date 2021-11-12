@@ -50,13 +50,21 @@ a {
   border-radius: 15px;
 }
 
+#cart:hover {
+  border: 2px solid purple;
+}
+
+#cartIcon {
+  width: 40px;
+}
+
 .homepageContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
   height: calc(100vh - 89px);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./components/images/people.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(./components/images/heroimage.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -137,6 +145,7 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 50px;
 }
 
 #footerGithub {
@@ -164,12 +173,8 @@ a {
 .item {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(229, 229, 229);
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  font-size: 2rem;
+  font-size: 1.5rem;
   align-items: center;
-  justify-content: space-around;
 }
 
 .itemPhoto {
@@ -182,11 +187,12 @@ a {
 
 .itemText {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  padding: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
   gap: 5px;
+  width: 200px;
+  justify-content: space-around;
 }
 
 .itemPrice {
@@ -198,10 +204,9 @@ a {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  width: 10rem;
+  width: 90%;
   font-size: 2rem;
-  padding: 1rem;
-  border-radius: 50px;
+  padding: 0.5rem;
   background-color: rgb(77 21 138);
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -238,26 +243,26 @@ a {
 
 #github {
   color: black;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 #facebook {
   color: black;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 #twitter {
   color: black;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 #instagram {
   color: black;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 .contactTextContainer {
@@ -279,7 +284,7 @@ a {
   grid-gap: 20px;
   gap: 20px;
   padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-bottom: 15vh;
 }
 
 .cartItemContainer {
@@ -304,20 +309,14 @@ a {
 }
 
 .addButton {
-  border: 2px solid rgb(77 21 138);
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-bottom: 2px;
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
 .minusButton {
-  border: 2px solid rgb(221, 45, 45);
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 2px;
-  border-radius: 8px;
+  width: 40px;
+
   cursor: pointer;
 }
 
@@ -364,4 +363,88 @@ a {
 .cartName {
   font-size: 20px;
   font-weight: 500;
+}
+
+#photoBomber {
+  background-image: url(./components/images/productImages/bomber.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoCoat {
+  background-image: url(./components/images/productImages/coat.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoFleece {
+  background-image: url(./components/images/productImages/fleec.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoHoodie {
+  background-image: url(./components/images/productImages/hoodie.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoMasks {
+  background-image: url(./components/images/productImages/masks.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoParka {
+  background-image: url(./components/images/productImages/parka.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoShirt {
+  background-image: url(./components/images/productImages/shirt.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoSocks {
+  background-image: url(./components/images/productImages/socks.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoSweats {
+  background-image: url(./components/images/productImages/sweats.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoTurtleneck {
+  background-image: url(./components/images/productImages/turtleneck.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoBelt {
+  background-image: url(./components/images/productImages/belt.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photoCardigan {
+  background-image: url(./components/images/productImages/cardigan.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

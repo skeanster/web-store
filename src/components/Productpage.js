@@ -12,7 +12,7 @@ const Productpage = (props) => {
         {Products.map((item) => {
           return (
             <div className="item" key={item.sku}>
-              <div className="itemPhoto">Photo</div>
+              <div className="itemPhoto" id={'photo' + item.name}></div>
               <div className="itemText">
                 <div className="itemName">{item.name}</div>
                 <div className="itemPrice">${item.price}</div>

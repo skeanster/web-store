@@ -15,7 +15,7 @@ const CartPage = (props) => {
         {productsList.map((item) => {
           return (
             <div className="cartItemContainer" key={item.name}>
-              <div className="cartPhoto">photo</div>
+              <div className="cartPhoto" id={'photo' + item.name}></div>
               <div className="cartDataContainer">
                 <div className="cartName">{item.name}</div>
                 <div className="cartQuantity">Quantity: {item.quantity}</div>
@@ -24,15 +24,19 @@ const CartPage = (props) => {
                   total cost: ${item.quantity * item.cost}
                 </div>
                 <div className="itemChangeButtons">
-                  <div
+                  <img
                     onClick={cartAdd}
                     data-name={item.name}
                     data-price={item.cost}
                     className="addButton"
-                  >
-                    +
-                  </div>
-                  <div className="minusButton">-</div>
+                    alt="add button"
+                    src="https://img.icons8.com/nolan/64/add.png"
+                  />
+                  <img
+                    className="minusButton"
+                    alt="minus button"
+                    src="https://img.icons8.com/nolan/64/minus.png"
+                  />
                 </div>
               </div>
             </div>

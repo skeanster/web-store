@@ -25,7 +25,12 @@ const Navbar = (props) => {
           </Link>
           <Link to="/web-store/CartPage">
             <div className="navItems" id="cart">
-              Cart:<div className="itemsCounter">{cartTotal}</div>
+              <img
+                id="cartIcon"
+                alt="cartIcon"
+                src="https://img.icons8.com/nolan/64/favorite-cart.png"
+              />
+              <div className="itemsCounter">{cartTotal}</div>
             </div>
           </Link>
         </div>
