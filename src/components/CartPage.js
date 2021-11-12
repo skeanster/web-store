@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const CartPage = (props) => {
-  const { cartTotal, productsList, totalPrice, cartAdd } = props;
+  const { cartTotal, productsList, totalPrice, cartAdd, cartRemove } = props;
 
   return (
     <div className="cartPage">
@@ -33,6 +33,9 @@ const CartPage = (props) => {
                     src="https://img.icons8.com/nolan/64/add.png"
                   />
                   <img
+                    onClick={cartRemove}
+                    data-name={item.name}
+                    data-price={item.cost}
                     className="minusButton"
                     alt="minus button"
                     src="https://img.icons8.com/nolan/64/minus.png"

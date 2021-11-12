@@ -62,6 +62,50 @@ const RouteSwitch = () => {
     }
   };
 
+  const cartRemove = (item) => {
+    if (isInCart(item.target.dataset.name).quantity > 1) {
+      let itemExist = cartState[0].products.find(
+        ({ name }) => name === item.target.dataset.name
+      );
+      let indexOfItem = cartState[0].products.indexOf(itemExist);
+      let tempArray = [...cartState[0].products];
+      let tempItem = { ...tempArray[indexOfItem] };
+      tempItem.quantity = tempItem.quantity - 1;
+      tempArray[indexOfItem] = tempItem;
+      setcartState([
+        {
+          products: tempArray,
+        },
+        { totalItems: cartState[1].totalItems - 1 },
+        {
+          totalCost:
+            cartState[2].totalCost -
+            Math.round(
+              (Number(item.target.dataset.price) + Number.EPSILON) * 100
+            ) /
+              100,
+        },
+      ]);
+    } else {
+      setcartState([
+        {
+          products: cartState[0].products.filter(
+            (product) => product.name !== item.target.dataset.name
+          ),
+        },
+        { totalItems: cartState[1].totalItems - 1 },
+        {
+          totalCost:
+            cartState[2].totalCost -
+            Math.round(
+              (Number(item.target.dataset.price) + Number.EPSILON) * 100
+            ) /
+              100,
+        },
+      ]);
+    }
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -91,6 +135,7 @@ const RouteSwitch = () => {
               productsList={cartState[0].products}
               totalPrice={cartState[2].totalCost}
               cartAdd={cartAdd}
+              cartRemove={cartRemove}
             />
           }
         />
