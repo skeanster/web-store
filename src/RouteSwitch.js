@@ -109,7 +109,6 @@ const RouteSwitch = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {console.log(cartState)}
         <Route
           path="/web-store"
           element={<App cartTotal={cartState[1].totalItems} />}
