@@ -106,6 +106,15 @@ const RouteSwitch = () => {
     }
   };
 
+  const checkoutCart = () => {
+    if (cartState[1].totalItems === 0) {
+      return;
+    } else {
+      alert('Thank you for shopping!');
+      setcartState([{ products: [] }, { totalItems: 0 }, { totalCost: 0 }]);
+    }
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -135,6 +144,7 @@ const RouteSwitch = () => {
               totalPrice={cartState[2].totalCost}
               cartAdd={cartAdd}
               cartRemove={cartRemove}
+              checkoutCart={checkoutCart}
             />
           }
         />

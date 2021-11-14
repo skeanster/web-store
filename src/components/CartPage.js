@@ -2,7 +2,14 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const CartPage = (props) => {
-  const { cartTotal, productsList, totalPrice, cartAdd, cartRemove } = props;
+  const {
+    cartTotal,
+    productsList,
+    totalPrice,
+    cartAdd,
+    cartRemove,
+    checkoutCart,
+  } = props;
 
   return (
     <div className="cartPage">
@@ -10,7 +17,9 @@ const CartPage = (props) => {
       <div className="cartContainer">
         <div className="cartCheckout">
           <div className="cartCompleteCost">Total: ${totalPrice}</div>
-          <div className="checkoutButton">Checkout</div>
+          <div className="checkoutButton" onClick={checkoutCart}>
+            Checkout
+          </div>
         </div>
         {productsList.map((item) => {
           return (
