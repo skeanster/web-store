@@ -1,5 +1,7 @@
 # Fake E-Commerce Store built with Create React App
 
+Check it out: [Live Demo](https://skeanster.github.io/web-store/) :point_left:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## What this is:
