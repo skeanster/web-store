@@ -100,7 +100,7 @@ const RouteSwitch = () => {
 
   const checkoutCart = () => {
     if (cartState.totalItems === 0) {
-      return;
+      alert('Your cart is empty, go shopping!');
     } else {
       alert('Thank you for shopping!');
       setcartState({ products: [], totalItems: 0, totalCost: 0 });
